@@ -43,6 +43,9 @@ dudes.next('Пётр'); // { name: 'Пётр', phone: '+70000000000' }
  */
 // delete faceBook['Полина']; // Удаляем Полину из книги, так как она переехала в Венецию
 
+dudes = dudes.refresh(dudes.collection[dudes.count]);
+friends = friends.refresh(friends.collection[friends.count]);
+
 // Так и есть, переносим всё на 8 часов. Идём обратно, чтобы всех предупредить
 // .prevMale() возращает JSON с именем и телефоном, но только предыдущего парня
 dudes.prevMale(); // { name: 'Олег Олегыч', phone: '+70000000000' }
